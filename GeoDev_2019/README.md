@@ -2,6 +2,7 @@
 
 Supporting scripts for Harrsiburg GeoDev
 
+Abstract:
 Facilitating the movement of data is crucial for organizations across the country. Whether in the government or private sectors, the skills to Extract Transform & Load (ETL) data are critical for maintaining production system workflows & viability. Esri provides two python frameworks for interfacing across a modern Web GIS. Arcpy is a Python site package that provides powerful geographic data analysis, conversion, management and automation. ArcGIS Python API is a powerful, modern, and easy to use Pythonic API for GIS professionals, developers, administrators, content publishers or anyone trying to accomplish ETL workflows within ArcGIS. The session will begin with introducing the Python API for Feature Service querying and data movement. However, the primary focus will be combining the ArcPy and Python API libraries for various ETL processes.
 
 ## Getting Started
@@ -32,20 +33,31 @@ Add additional notes about how to deploy this on a live system
 
 For Demonstration Purposes, created subsets of the data for testing.
 
-   * Add Features from SDE - v1  |  55 Records
-        * Adds features one by one
+   * **Overwrite Content with CSV  |  55 Records**
+        * Adds features by uploading csv
+        
+ 
+   * **Add Features from SDE - v1  |  55 Records**
+        * Adds features one by one using
+        * Utilizes [Add Features](https://developers.arcgis.com/rest/services-reference/add-features.htm)
         
         
-   * Add Features from SDE - v2  |  25,261 Records
+   * **Add Features from SDE - v2  |  25,261 Records**
         * Adds features in 4,000 grouped record sets
+        * Utilizes [Add Features](https://developers.arcgis.com/rest/services-reference/add-features.htm)
         
         
-   * Append Data |  104,265 Records
-        * Adds features in 50,000 grouped record sets
+   * **Append Data |  104,265 Records**
+        * Adds features in 50,000 grouped record sets through File geodatabases
+        * Utilizes [Append](https://developers.arcgis.com/rest/services-reference/append-feature-service-.htm)
         
         
-   * Overwrite Content Using Service Definitions |  548,000 Records
-        * Converts entire dataset into a service definition. Overwrites service.      
+        
+   * **Overwrite Content Using Service Definitions |  548,000 Records**
+        * Converts entire dataset into a service definition. Overwrites service. 
+        
+        * Utilizes [Service Definitions](http://enterprise.arcgis.com/en/server/latest/publish-services/windows/about-service-definition-files.htm)
+        
         
         
 Although I am connecting to an Enterprise Geodatabase.  The workflows will work just fine with a file geodatabase.
